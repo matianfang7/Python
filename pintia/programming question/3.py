@@ -46,29 +46,119 @@ for i in range(n):
         print(str(n-i-1)+" "+lst[i])
 
 # 3-4
-
+ch=input()
+string=input()
+n=string.rfind(ch)
+if n!=-1:
+    print("index = "+str(n))
+else:
+    print("Not Found")
 
 # 3-5
+s=input()
+n=""
+for i in range(len(s)):
+    if "0"<=s[i]<="9":
+        n+=s[i]
+print(int(n))
 
 # 3-6
+lst,times= list(input().split())[1:],0
+for i in lst:
+    t = lst.count(i)
+    if t>times:
+        times=t
+        who=i
+print(who,times)
+
+
 
 # 3-7
+n=int(input())
+lst=list(map(int,input().split()))
+maxnum = max(lst)
+print(str(maxnum)+" "+str(lst.index(maxnum)))
 
 # 3-8
+n=input()
+#print(n[::-1])
+#print(str((list(n).reverse())).join(""))
+n=list(n)
+n.reverse()
+str=""
+print(str.join(n))
 
 # 3-9
+dic,s='0123456789abcdefABCDEF',''
+st=input()
+for i in st:
+    if i in dic:
+        s+=i
+    if i=='#':
+        break
+if s=='':
+    print(0)
+else:
+    num=int(s,16)
+    if st.find('-')<st.find(s[0]):
+        num=-num
+    print(num)
 
 # 3-10
+Str = input()
+count=0
+for i in Str:
+    if "A"<=i<="Z":
+        if i!="A" and i!="E" and i!="I" and i!="O" and i!="U":
+            count+=1
+print(count)
 
 # 3-11
+lst = input().split()
+lst.sort()
+print("After sorted:")
+for i in lst:
+    print(i)
 
 # 3-12
+n = list(input())
+result = sum([int(i) for i in n])
+print(str(len(n))+" "+str(result))
 
 # 3-13
-      
+Str = input()
+result = ""
+for i in Str:
+    if "A"<=i<="Z":
+        result+=chr(ord('Z')-ord(i)+ord("A"))
+    else:
+        result+=i
+print(result)
+
 # 3-14
+Str = input()
+result = ""
+for i in Str:
+    if i == "#":
+        break
+    if i.isalpha():
+        if "a"<=i<="z":
+            result+=i.upper()
+        else:
+            result+=i.lower()
+    else :
+        result+=i
+print(result)
 
 # 3-15
+# 1.输入
+s=input()
+
+# 2.处理
+words=s.split()
+        
+# 3.输出
+print(len(words))
 
 # 3-16
 Str = list(input())
