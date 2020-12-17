@@ -44,8 +44,20 @@ n=len(lst)
 for i in range(n):
     if lst[i]==ch1 or lst[i]==ch2:
         print(str(n-i-1)+" "+lst[i])
+# 3-20
+num = input()[::-1]
+isZero = True
+count = 0
+for i in num:
+    if isZero and i=="0":
+        count+=1
+        continue
+    if isZero and i!="0":
+        isZero = False
+        break
+print(str(num[count:]))
 
-#3-21
+# 3-21
 s = input()
 print(s)
 if s == s[::-1] :  
