@@ -17,3 +17,11 @@ for i in range(m,n+1):
         sum+=i
         count+=1
 print("%d %d"%(count,sum))
+
+# 4-3
+n=int(input())
+sum=1
+while n>1:
+    sum=(sum+1)*2
+    n-=1
+print(sum)
